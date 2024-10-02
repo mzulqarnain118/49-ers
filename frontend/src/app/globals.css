@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom styling for the DataGrid rows */
+.MuiDataGrid-row {
+  transition: background-color 0.2s ease, border 0.2s ease;
+}
+
+/* Hover effect on the row */
+.MuiDataGrid-row:hover {
+  background-color: #AA00001A !important;
+  border: 2px solid #aa0000;
+}
+
+.MuiDataGrid-topContainer {
+  background-color: #4E0000 !important; /* bg-[#4E0000] */
+  border-bottom-width: 8px; /* border-b-8 */
+  border-bottom-color: #900101; /* border-[#900101] */
+  border-bottom-style: solid; /* Make sure the border has a solid style */
+}
+
+.css-yrdy0g-MuiDataGrid-columnHeaderRow{
+  background-color: #4E0000 !important;
+  color: white;
+}
+
+.MuiDataGrid-columnHeaderTitleContainer{
+  color: white !important;
+}
